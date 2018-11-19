@@ -23,7 +23,7 @@
             overflow: hidden;
             z-index: 4;
         }
-#idcr{
+#idci{
 
 z-index: 12;
 size: 800px;
@@ -83,7 +83,7 @@ size: 800px;
 
 </head>
 <body>
-	<img id="idcr"  onmousedown="bigImg()" onclick="normalImg()" border="0" src="https://www.freds-haberdashery.co.uk/wp-content/uploads/images/products/p-7058-K1859-black.jpg" alt="Smiley" width="32" height="32">
+	<img id="idci"  ontouchstart="ci()" ontouchend="nci()" border="0" src="https://www.freds-haberdashery.co.uk/wp-content/uploads/images/products/p-7058-K1859-black.jpg" alt="Smiley" width="32" height="32">
     <div id="canvasArea"></div>
 
     
@@ -91,21 +91,23 @@ size: 800px;
 
 var vw = window.innerWidth;
 var vh = window.innerHeight;
-	var boolcr=false;
-document.getElementById("idcr").style.position = "absolute";
-document.getElementById("idcr").style.top=String(vh/2+vh/2*0.1)+"px";
-document.getElementById("idcr").style.left=String(vw/2-vw/2*0.1)+"px";
+	var boolcr=false;	
+	var boolci=false;
 
-document.getElementById("idcr").style.width=String(80)+"px";
-document.getElementById("idcr").style.height=String(80)+"px";
+document.getElementById("idci").style.position = "absolute";
+document.getElementById("idci").style.top=String(vh/2+vh/2*0.1)+"px";
+document.getElementById("idci").style.left=String(vw/2-vw/2*0.1)+"px";
 
-function  bigImg(){
- boolcr=true;
+document.getElementById("idci").style.width=String(80)+"px";
+document.getElementById("idci").style.height=String(80)+"px";
+
+function ci(){
+ boolci=true;
 	console.log(7777777);
 }
 
-function normalImg(){
- boolcr=false;
+function nci(){
+ boolci=false;
 
 }
     (function() {
