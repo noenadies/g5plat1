@@ -26,9 +26,14 @@
 #idci{
 
 z-index: 12;
-size: 800px;
+
 }
-        
+#idcr{
+
+z-index: 13;
+
+}
+            
 	</style>
     <!-- Libs and GDJS core files : -->
 		<script src="libs\jshashtable.js"></script>
@@ -83,7 +88,8 @@ size: 800px;
 
 </head>
 <body>
-	<img id="idci"  ontouchstart="ci()" ontouchend="nci()" border="0" src="https://www.freds-haberdashery.co.uk/wp-content/uploads/images/products/p-7058-K1859-black.jpg" alt="Smiley" width="32" height="32">
+	<img id="idci"  ontouchstart="ci()" ontouchend="nci()" border="0" src="icl.png" alt="Smiley" width="32" height="32">
+		<img id="idcr"  ontouchstart="cr()" ontouchend="ncr()" border="0" src="shadedDark05.png" alt="Smiley" width="32" height="32">
     <div id="canvasArea"></div>
 
     
@@ -96,10 +102,18 @@ var vh = window.innerHeight;
 
 document.getElementById("idci").style.position = "absolute";
 document.getElementById("idci").style.top=String(vh/2+vh/2*0.1)+"px";
-document.getElementById("idci").style.left=String(vw/2-vw/2*0.1)+"px";
+document.getElementById("idci").style.left=String(vw/2-vw/2*0.2)+"px";
 
 document.getElementById("idci").style.width=String(80)+"px";
 document.getElementById("idci").style.height=String(80)+"px";
+/*
+
+document.getElementById("idcr").style.position = "absolute";
+document.getElementById("idcr").style.top=String(vh/2+vh/2*0.1)+"px";
+document.getElementById("idcr").style.left=String(vw/2-vw/2*0.9)+"px";
+
+document.getElementById("idcr").style.width=String(80)+"px";
+document.getElementById("idcr").style.height=String(80)+"px";*/
 
 function ci(){
  boolci=true;
@@ -108,6 +122,16 @@ function ci(){
 
 function nci(){
  boolci=false;
+
+}
+
+function cr(){
+ //boolci=true;
+	console.log(7777777);
+}
+
+function ncr(){
+// boolci=false;
 
 }
     (function() {
