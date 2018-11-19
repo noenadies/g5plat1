@@ -15,14 +15,20 @@
 			padding: 0;
 			background-color: #000000;
             overflow: hidden;
+            z-index: 1;
 		}
         #canvasArea {
             margin-left: auto;
             margin-right: auto;
             overflow: hidden;
+            z-index: 4;
         }
+#idcr{
 
-        @font-face{ font-family : "gdjs_font_Bimbo_JVE.ttf"; src : url('Bimbo_JVE.ttf') format('truetype'); }
+z-index: 12;
+size: 800px;
+}
+        
 	</style>
     <!-- Libs and GDJS core files : -->
 		<script src="libs\jshashtable.js"></script>
@@ -66,28 +72,42 @@
 	<script src="pixi-renderers\loadingscreen-pixi-renderer.js"></script>
 	<script src="howler-sound-manager\howler.min.js"></script>
 	<script src="howler-sound-manager\howler-sound-manager.js"></script>
-	<script src="Extensions\AnchorBehavior\anchorruntimebehavior.js"></script>
 	<script src="Extensions\DraggableBehavior\draggableruntimebehavior.js"></script>
-	<script src="Extensions\PathfindingBehavior\pathfindingobstacleruntimebehavior.js"></script>
-	<script src="Extensions\PathfindingBehavior\pathfindingruntimebehavior.js"></script>
 	<script src="Extensions\PlatformBehavior\platformerobjectruntimebehavior.js"></script>
 	<script src="Extensions\PlatformBehavior\platformruntimebehavior.js"></script>
-	<script src="Extensions\SystemInfo\systeminfotools.js"></script>
 	<script src="Extensions\TextObject\textruntimeobject-pixi-renderer.js"></script>
 	<script src="Extensions\TextObject\textruntimeobject.js"></script>
-	<script src="Extensions\TiledSpriteObject\tiledspriteruntimeobject-pixi-renderer.js"></script>
-	<script src="Extensions\TiledSpriteObject\tiledspriteruntimeobject.js"></script>
 	<script src="code0.js"></script>
 	<script src="data.js"></script>
 
 
 </head>
 <body>
+	<img id="idcr"  onmousedown="bigImg()" onclick="normalImg()" border="0" src="https://www.freds-haberdashery.co.uk/wp-content/uploads/images/products/p-7058-K1859-black.jpg" alt="Smiley" width="32" height="32">
     <div id="canvasArea"></div>
 
-    <div style="font-family: 'gdjs_font_Bimbo_JVE.ttf'; color: black;">.</div>
+    
 	<script>
 
+var vw = window.innerWidth;
+var vh = window.innerHeight;
+	var boolcr=false;
+document.getElementById("idcr").style.position = "absolute";
+document.getElementById("idcr").style.top=String(vh/2+vh/2*0.1)+"px";
+document.getElementById("idcr").style.left=String(vw/2-vw/2*0.1)+"px";
+
+document.getElementById("idcr").style.width=String(80)+"px";
+document.getElementById("idcr").style.height=String(80)+"px";
+
+function  bigImg(){
+ boolcr=true;
+	console.log(7777777);
+}
+
+function normalImg(){
+ boolcr=false;
+
+}
     (function() {
         //Initialization
         gdjs.registerObjects();
